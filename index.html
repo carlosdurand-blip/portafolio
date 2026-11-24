@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carlos Daniel Durand Pizarro | Portafolio</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Tu CSS personalizado -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#090d16] text-slate-200 font-sans antialiased selection:bg-emerald-500 selection:text-slate-950">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#090d16]/90 backdrop-blur-md border-b border-slate-800/80">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#inicio" class="font-mono text-lg font-semibold text-emerald-400 tracking-tight hover:text-emerald-300 transition">
+        &lt;carlos_dan /&gt;
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <li><a href="#inicio" class="nav-link hover:text-emerald-400 transition">INICIO</a></li>
+        <li><a href="#nosotros" class="nav-link hover:text-emerald-400 transition">NOSOTROS</a></li>
+        <li><a href="#habilidades" class="nav-link hover:text-emerald-400 transition">HABILIDADES</a></li>
+        <li><a href="#galeria" class="nav-link hover:text-emerald-400 transition">GALERÍA</a></li>
+        <li><a href="#contactos" class="nav-link hover:text-emerald-400 transition">CONTACTOS</a></li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" aria-label="Abrir menú" class="md:hidden text-slate-300 hover:text-emerald-400 text-xl p-2">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0d1322] border-b border-slate-800 px-6 py-4">
+      <ul class="flex flex-col gap-4 text-sm font-medium text-slate-300">
+        <li><a href="#inicio" class="mobile-link block hover:text-emerald-400">INICIO</a></li>
+        <li><a href="#nosotros" class="mobile-link block hover:text-emerald-400">NOSOTROS</a></li>
+        <li><a href="#habilidades" class="mobile-link block hover:text-emerald-400">HABILIDADES</a></li>
+        <li><a href="#galeria" class="mobile-link block hover:text-emerald-400">GALERÍA</a></li>
+        <li><a href="#contactos" class="mobile-link block hover:text-emerald-400">CONTACTOS</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 1. SECCIÓN INICIO -->
+  <section id="inicio" class="min-h-screen pt-24 pb-16 px-4 sm:px-6 flex items-center">
+    <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      
+      <!-- Foto a un lado -->
+      <div class="lg:col-span-5 flex justify-center">
+        <div class="relative w-72 sm:w-80 rounded-2xl p-2 bg-gradient-to-br from-emerald-500/30 via-slate-800 to-cyan-500/30 border border-slate-700/70 shadow-2xl">
+          <img src="carlos.png" alt="Carlos Daniel Durand Pizarro" class="w-full h-96 object-cover rounded-xl">
+          <div class="mt-3 px-2 pb-1 flex items-center justify-between text-xs font-mono text-slate-400">
+            <span class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              Estudiante 2do Ciclo
+            </span>
+            <span>Perú 🇵🇪</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Presentación y Consola print() al otro lado -->
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        <div class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-xs">
+          Portafolio Personal • Ingeniería de Software / Sistemas
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl font-bold text-white leading-tight">
+          Carlos Daniel <br class="hidden sm:block">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Durand Pizarro</span>
+        </h1>
+
+        <!-- Consola animada -->
+        <div class="bg-[#0d1322] border border-slate-800 rounded-xl overflow-hidden shadow-lg max-w-xl mx-auto lg:mx-0 text-left">
+          <div class="bg-slate-900/90 px-4 py-2.5 border-b border-slate-800 flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+            <span class="ml-2 text-xs font-mono text-slate-400">main.py — bash</span>
+          </div>
+          <div class="p-5 font-mono text-base sm:text-lg min-h-[76px] flex items-center">
+            <span class="text-emerald-400 mr-2">&gt;&gt;&gt;</span>
+            <span id="typewriter" class="text-cyan-300"></span>
+            <span class="cursor text-emerald-400 font-bold ml-0.5">|</span>
+          </div>
+        </div>
+
+        <p class="text-slate-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
+          Estudiante de 2do ciclo apasionado por la lógica de programación, el desarrollo web y las bases de datos relacionales. Construyendo bases sólidas proyecto a proyecto.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+          <a href="#galeria" class="px-6 py-3 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-sm transition shadow-lg shadow-emerald-500/20">
+            Ver Proyectos
+          </a>
+          <a href="#contactos" class="px-6 py-3 rounded-lg bg-slate-800/80 hover:bg-slate-800 text-slate-200 border border-slate-700 font-medium text-sm transition">
+            Contáctame
+          </a>
+          <a href="https://github.com/carlosdurand-blip" target="_blank" rel="noopener noreferrer" class="px-4 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-sm transition flex items-center gap-2">
+            <i class="fab fa-github text-lg"></i>
+            <span>carlosdurand-blip</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 2. SECCIÓN NOSOTROS & TESTIMONIOS -->
+  <section id="nosotros" class="py-20 px-4 sm:px-6 bg-[#0c111e] border-t border-slate-800/60">
+    <div class="max-w-6xl mx-auto space-y-16">
+      
+      <!-- Sobre mí -->
+      <div class="max-w-3xl mx-auto text-center space-y-4">
+        <span class="font-mono text-emerald-400 text-sm">// 01. NOSOTROS</span>
+        <h2 class="text-3xl font-bold text-white">Sobre Mí</h2>
+        <p class="text-slate-400 leading-relaxed">
+          Soy <strong class="text-slate-200">Carlos Daniel Durand Pizarro</strong>, estudiante de segundo ciclo enfocado en dominar los fundamentos de la programación con <span class="text-emerald-400">Python</span>, el diseño de interfaces web con <span class="text-emerald-400">HTML5</span> y el modelado y consulta de datos en <span class="text-emerald-400">Oracle SQL</span>. Me gusta trabajar en equipo, apoyar a mis compañeros cuando surge algún bug y cumplir con responsabilidad cada reto académico.
+        </p>
+      </div>
+
+      <!-- Testimonios Reales de Compañeros y Docente -->
+      <div class="space-y-8">
+        <div class="text-center">
+          <h3 class="text-xl font-semibold text-white">Lo que dicen mis compañeros y docente</h3>
+          <p class="text-sm text-slate-400 mt-1">Referencias reales de clase y trabajo en equipo</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Docente: Ing. Miguel Pallín -->
+          <div class="p-6 rounded-xl bg-[#090d16] border border-emerald-500/30 relative">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold font-mono">
+                  MP
+                </div>
+                <div>
+                  <h4 class="font-semibold text-white text-sm">Ing. Miguel Pallín</h4>
+                  <p class="text-xs text-emerald-400 font-mono">Docente del Curso</p>
+                </div>
+              </div>
+              <i class="fas fa-chalkboard-teacher text-emerald-500/40 text-xl"></i>
+            </div>
+            <p class="text-slate-300 text-sm italic leading-relaxed">
+              "Carlos es un estudiante que aún está en proceso de aprendizaje, pero destaca por su constancia y porque cumple puntualmente con todos los trabajos y entregas asignadas en clase."
+            </p>
+          </div>
+
+          <!-- Compañero 1: Alvaro Ricalde -->
+          <div class="p-6 rounded-xl bg-[#090d16] border border-slate-800">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold font-mono">
+                  AR
+                </div>
+                <div>
+                  <h4 class="font-semibold text-white text-sm">Alvaro Ricalde</h4>
+                  <p class="text-xs text-slate-400">Compañero de Clase</p>
+                </div>
+              </div>
+              <i class="fas fa-quote-right text-slate-700 text-xl"></i>
+            </div>
+            <p class="text-slate-300 text-sm italic leading-relaxed">
+              "Es un gran compañero consejero y alguien en quien realmente se puede confiar tanto en los trabajos grupales como cuando necesitas un buen consejo en la carrera."
+            </p>
+          </div>
+
+          <!-- Compañero 2: Leonardo Valderrama -->
+          <div class="p-6 rounded-xl bg-[#090d16] border border-slate-800">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold font-mono">
+                  LV
+                </div>
+                <div>
+                  <h4 class="font-semibold text-white text-sm">Leonardo Valderrama</h4>
+                  <p class="text-xs text-slate-400">Compañero de Clase</p>
+                </div>
+              </div>
+              <i class="fas fa-quote-right text-slate-700 text-xl"></i>
+            </div>
+            <p class="text-slate-300 text-sm italic leading-relaxed">
+              "Un compañero súper divertido y con quien puedes resolver cualquier problema de software, como aquella vez que arreglamos juntos un enlace para una base de datos."
+            </p>
+          </div>
+
+          <!-- Compañero 3: Wilder Sánchez -->
+          <div class="p-6 rounded-xl bg-[#090d16] border border-slate-800">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold font-mono">
+                  WS
+                </div>
+                <div>
+                  <h4 class="font-semibold text-white text-sm">Wilder Sánchez</h4>
+                  <p class="text-xs text-slate-400">Compañero de Clase</p>
+                </div>
+              </div>
+              <i class="fas fa-quote-right text-slate-700 text-xl"></i>
+            </div>
+            <p class="text-slate-300 text-sm italic leading-relaxed">
+              "Es un compañero con quien siempre se ríe y se pasa un buen rato, pero al mismo tiempo demuestra mucha responsabilidad y capacidad para resolver los problemas."
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. SECCIÓN HABILIDADES (3 Habilidades) -->
+  <section id="habilidades" class="py-20 px-4 sm:px-6 border-t border-slate-800/60">
+    <div class="max-w-4xl mx-auto space-y-10">
+      <div class="text-center space-y-2">
+        <span class="font-mono text-emerald-400 text-sm">// 02. HABILIDADES</span>
+        <h2 class="text-3xl font-bold text-white">Stack Tecnológico</h2>
+        <p class="text-slate-400 text-sm">Tecnologías principales que manejo actualmente en 2do ciclo</p>
+      </div>
+
+      <div class="space-y-6">
+        <!-- Python -->
+        <div class="p-5 rounded-xl bg-[#0d1322] border border-slate-800">
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-semibold text-white flex items-center gap-2.5">
+              <i class="fab fa-python text-emerald-400 text-lg"></i> Python
+            </span>
+            <span class="font-mono text-xs text-emerald-400">65%</span>
+          </div>
+          <div class="w-full h-2.5 bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-gradient-to-r from-emerald-500 to-cyan-400 rounded-full" style="width: 65%"></div>
+          </div>
+        </div>
+
+        <!-- HTML5 -->
+        <div class="p-5 rounded-xl bg-[#0d1322] border border-slate-800">
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-semibold text-white flex items-center gap-2.5">
+              <i class="fab fa-html5 text-orange-400 text-lg"></i> HTML5
+            </span>
+            <span class="font-mono text-xs text-cyan-400">70%</span>
+          </div>
+          <div class="w-full h-2.5 bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-gradient-to-r from-orange-500 to-amber-400 rounded-full" style="width: 70%"></div>
+          </div>
+        </div>
+
+        <!-- Oracle SQL -->
+        <div class="p-5 rounded-xl bg-[#0d1322] border border-slate-800">
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-semibold text-white flex items-center gap-2.5">
+              <i class="fas fa-database text-rose-400 text-lg"></i> Oracle SQL
+            </span>
+            <span class="font-mono text-xs text-rose-400">60%</span>
+          </div>
+          <div class="w-full h-2.5 bg-slate-800 rounded-full overflow-hidden">
+            <div class="h-full bg-gradient-to-r from-rose-500 to-orange-400 rounded-full" style="width: 60%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SECCIÓN GALERÍA (2 Proyectos de 2do Ciclo) -->
+  <section id="galeria" class="py-20 px-4 sm:px-6 bg-[#0c111e] border-t border-slate-800/60">
+    <div class="max-w-5xl mx-auto space-y-10">
+      <div class="text-center space-y-2">
+        <span class="font-mono text-emerald-400 text-sm">// 03. GALERÍA DE PROYECTOS</span>
+        <h2 class="text-3xl font-bold text-white">Mis Proyectos Académicos</h2>
+        <p class="text-slate-400 text-sm">Trabajos desarrollados durante mi 2do ciclo</p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="flex flex-wrap justify-center gap-3">
+        <button class="filter-btn active px-4 py-2 rounded-lg text-xs font-mono bg-emerald-500 text-slate-950 font-semibold transition" data-filter="all">
+          Todos (2)
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-lg text-xs font-mono bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-filter="python">
+          Python
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-lg text-xs font-mono bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-filter="sql">
+          Oracle SQL
+        </button>
+      </div>
+
+      <!-- Grid de 2 Proyectos -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Proyecto 1: Python -->
+        <article class="project-card rounded-2xl bg-[#090d16] border border-slate-800 overflow-hidden hover:border-emerald-500/40 transition flex flex-col justify-between" data-category="python">
+          <div>
+            <div class="h-44 bg-gradient-to-br from-emerald-950 via-slate-900 to-slate-950 p-6 flex flex-col justify-between border-b border-slate-800">
+              <span class="self-start px-3 py-1 rounded-md bg-emerald-500/20 text-emerald-400 font-mono text-xs">
+                Python 3
+              </span>
+              <div class="font-mono text-xs text-slate-400">
+                &gt; sistema_notas_consola.py
+              </div>
+            </div>
+            <div class="p-6 space-y-3">
+              <h3 class="text-xl font-bold text-white">Gestor de Notas y Promedios</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Aplicación de consola desarrollada en Python para registrar estudiantes, calcular promedios ponderados de ciclo y validar estados de aprobación mediante estructuras condicionales y listas.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2 flex items-center justify-between">
+            <button onclick="openModal('python')" class="text-xs font-mono text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5">
+              <i class="fas fa-code"></i> Ver código de muestra
+            </button>
+            <a href="https://github.com/carlosdurand-blip" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-white">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Proyecto 2: Oracle SQL -->
+        <article class="project-card rounded-2xl bg-[#090d16] border border-slate-800 overflow-hidden hover:border-rose-500/40 transition flex flex-col justify-between" data-category="sql">
+          <div>
+            <div class="h-44 bg-gradient-to-br from-rose-950 via-slate-900 to-slate-950 p-6 flex flex-col justify-between border-b border-slate-800">
+              <span class="self-start px-3 py-1 rounded-md bg-rose-500/20 text-rose-400 font-mono text-xs">
+                Oracle SQL
+              </span>
+              <div class="font-mono text-xs text-slate-400">
+                &gt; bd_matricula_academica.sql
+              </div>
+            </div>
+            <div class="p-6 space-y-3">
+              <h3 class="text-xl font-bold text-white">Base de Datos Relacional de Matrícula</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Diseño de tablas normalizadas, llaves primarias/foráneas y consultas con JOINs en Oracle SQL para gestionar alumnos, cursos, docentes y enlaces de matrícula académica.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2 flex items-center justify-between">
+            <button onclick="openModal('sql')" class="text-xs font-mono text-rose-400 hover:text-rose-300 flex items-center gap-1.5">
+              <i class="fas fa-database"></i> Ver script SQL
+            </button>
+            <a href="https://github.com/carlosdurand-blip" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-white">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SECCIÓN CONTACTOS -->
+  <section id="contactos" class="py-20 px-4 sm:px-6 border-t border-slate-800/60">
+    <div class="max-w-3xl mx-auto space-y-10">
+      <div class="text-center space-y-2">
+        <span class="font-mono text-emerald-400 text-sm">// 04. CONTACTOS</span>
+        <h2 class="text-3xl font-bold text-white">Envíame un Mensaje</h2>
+        <p class="text-slate-400 text-sm">¿Tienes alguna consulta, proyecto o consejo de código? Escríbeme aquí.</p>
+      </div>
+
+      <form id="contact-form" action="guardar_contacto.php" method="POST" class="p-6 sm:p-8 rounded-2xl bg-[#0d1322] border border-slate-800 space-y-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label for="name" class="block text-xs font-mono text-slate-400 mb-2">Tu Nombre *</label>
+            <input type="text" id="name" name="name" required placeholder="Ej. Juan Pérez"
+              class="w-full px-4 py-3 rounded-lg bg-[#090d16] border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-emerald-400">
+          </div>
+          <div>
+            <label for="email" class="block text-xs font-mono text-slate-400 mb-2">Tu Correo *</label>
+            <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com"
+              class="w-full px-4 py-3 rounded-lg bg-[#090d16] border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-emerald-400">
+          </div>
+        </div>
+
+        <div>
+          <label for="subject" class="block text-xs font-mono text-slate-400 mb-2">Asunto *</label>
+          <input type="text" id="subject" name="subject" required placeholder="Consulta sobre portafolio / proyecto"
+            class="w-full px-4 py-3 rounded-lg bg-[#090d16] border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-emerald-400">
+        </div>
+
+        <div>
+          <label for="message" class="block text-xs font-mono text-slate-400 mb-2">Mensaje *</label>
+          <textarea id="message" name="message" rows="4" required placeholder="Escribe tu mensaje aquí..."
+            class="w-full px-4 py-3 rounded-lg bg-[#090d16] border border-slate-700 text-slate-200 text-sm focus:outline-none focus:border-emerald-400"></textarea>
+        </div>
+
+        <button type="submit" id="submit-btn"
+          class="w-full py-3.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-sm transition shadow-lg shadow-emerald-500/20">
+          Enviar Mensaje
+        </button>
+
+        <div id="form-status" class="hidden text-center text-sm font-medium p-3 rounded-lg"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 px-4 border-t border-slate-800/80 bg-[#070a11] text-center text-xs text-slate-500 space-y-2">
+    <p class="font-mono text-slate-400">Carlos Daniel Durand Pizarro (carlos_dan)</p>
+    <p>Desarrollado con HTML5, CSS3 y JavaScript • Alojado en InfinityFree &amp; GitHub</p>
+  </footer>
+
+  <!-- MODAL PARA VER CÓDIGO DE PROYECTOS -->
+  <div id="code-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-[#0d1322] border border-slate-700 rounded-2xl max-w-2xl w-full overflow-hidden shadow-2xl">
+      <div class="px-5 py-3.5 bg-slate-900 border-b border-slate-800 flex items-center justify-between">
+        <span id="modal-title" class="font-mono text-sm text-emerald-400">codigo.py</span>
+        <button onclick="closeModal()" class="text-slate-400 hover:text-white text-lg">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <pre class="p-5 text-xs sm:text-sm font-mono text-slate-300 overflow-x-auto leading-relaxed"><code id="modal-code"></code></pre>
+    </div>
+  </div>
+
+  <!-- Tu JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
